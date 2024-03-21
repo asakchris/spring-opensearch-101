@@ -9,12 +9,9 @@ spring:
 #          truststore:
 #            certificate: ${SSL_CERT_HOME}\os\local\http_ca.crt
 opensearch:
-#  uris: https://localhost:9200
-#  username: admin
-#  password: OnePlusOneEquals2
-  uris: https://vpc-dev-ripa-os-01-hnxykiodwip772kwd3zmxavd5y.us-east-1.es.amazonaws.com
-  username: dev-ripa-master
-  password: 7mBoT!qg2qxQ
+  uris: https://localhost:9200
+  username: admin
+  password: <replace with your password>
 #  restclient:
 #    ssl:
 #      bundle: client
