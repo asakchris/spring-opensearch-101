@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "6e9add86-4794-4bb6-89aa-5188d2ec7f0d",
+		"name": "OpenSearch-101",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5078417"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"firstName\": \"Terry\",\r\n    \"lastName\": \"Medhurst\",\r\n    \"age\": 50,\r\n    \"gender\": \"male\",\r\n    \"email\": \"atuny0@sohu.com\",\r\n    \"birthDate\": \"2000-12-25\",\r\n    \"bloodGroup\": \"A-\",\r\n    \"height\": 189,\r\n    \"weight\": 75.4,\r\n    \"hair\": {\r\n        \"color\": \"Black\",\r\n        \"type\": \"Strands\"\r\n    },\r\n    \"address\": {\r\n        \"street\": \"1745 T Street Southeast\",\r\n        \"city\": \"Washington\",\r\n        \"zip\": \"20020\",\r\n        \"state\": \"DC\"\r\n    },\r\n    \"bank\": [\r\n        {\r\n            \"cardNumber\": \"50380955204220685\",\r\n            \"cardType\": \"maestro\",\r\n            \"currency\": \"Dollar\"\r\n        },\r\n        {\r\n            \"cardNumber\": \"5355920631952404\",\r\n            \"cardType\": \"mastercard\",\r\n            \"currency\": \"Dollar\"\r\n        }\r\n    ],\r\n    \"ssn\": \"661-64-2976\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/persons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search person by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/persons/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/persons?card_number=50380955204220685",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"persons"
+					],
+					"query": [
+						{
+							"key": "card_number",
+							"value": "50380955204220685"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
